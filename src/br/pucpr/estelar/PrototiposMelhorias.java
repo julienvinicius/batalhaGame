@@ -1,5 +1,6 @@
 package br.pucpr.estelar;
 
+import java.awt.event.KeyListener;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.HashSet;
 import java.util.TreeSet;
 
 import static java.awt.event.KeyEvent.*;
@@ -116,9 +118,10 @@ public class GameFrame extends JFrame {
         EventQueue.invokeLater(() -> new GameFrame(config).setVisible(true));
     }
 
-    public double getX() {
-        return x;
+    public int getX() {
+    return (int) x;  // Converte de double para int
     }
+
 
     public void setX(double x) {
         this.x = x;
